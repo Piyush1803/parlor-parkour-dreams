@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, Heart, Sparkles, Palette, Crown, MapPin, Phone, Mail, Instagram } from "lucide-react";
+import { Star, Heart, Sparkles, Palette, Crown, MapPin, Phone, Mail, Instagram, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import ConsultationForm from "@/components/ConsultationForm";
 
 // Import images
 import heroImage from "@/assets/hero-bride.jpg";
@@ -64,18 +65,27 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <Badge className="mb-6 bg-white/20 text-white border-white/30 animate-fade-in-up">
+          <Badge className="mb-6 bg-background/90 text-primary border-primary/30 animate-fade-in-up">
             <Crown className="w-4 h-4 mr-2" />
             Premium Bridal Beauty Services
           </Badge>
           
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up [animation-delay:200ms]">
+          <div className="mb-4 animate-fade-in-up [animation-delay:100ms]">
+            <h1 className="font-serif text-5xl md:text-7xl font-bold mb-2 text-white drop-shadow-lg">
+              The Magic Touch
+            </h1>
+            <p className="text-2xl md:text-3xl font-serif text-primary-glow drop-shadow-md">
+              Palak Makeover
+            </p>
+          </div>
+          
+          <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6 animate-fade-in-up [animation-delay:200ms] text-white drop-shadow-lg">
             Your Dream
             <br />
-            <span className="text-primary-glow">Wedding Look</span>
-          </h1>
+            <span className="text-accent">Wedding Look</span>
+          </h2>
           
-          <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-in-up [animation-delay:400ms]">
+          <p className="text-xl md:text-2xl mb-8 text-white drop-shadow-md animate-fade-in-up [animation-delay:400ms]">
             Transform your special day with our exquisite bridal makeup, hair styling, and beauty services
           </p>
           
@@ -91,7 +101,7 @@ const Index = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="bg-white/10 border-white/30 text-white hover:bg-white/20 text-lg px-8 py-6"
+              className="bg-background/20 border-background/50 text-background hover:bg-background/30 backdrop-blur-sm text-lg px-8 py-6"
               onClick={() => document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" })}
             >
               View Our Work
@@ -249,11 +259,20 @@ const Index = () => {
                       <MapPin className="w-6 h-6 text-primary mr-3" />
                       <h3 className="text-xl font-semibold text-foreground">Location</h3>
                     </div>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground mb-3">
                       123 Bridal Avenue<br />
                       Mumbai, Maharashtra 400001<br />
                       India
                     </p>
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => window.open("https://maps.google.com/?q=123+Bridal+Avenue+Mumbai+Maharashtra+400001+India", "_blank")}
+                      className="mt-2"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Get Directions
+                    </Button>
                   </CardContent>
                 </Card>
 
@@ -288,35 +307,9 @@ const Index = () => {
                 </Card>
               </div>
 
-              {/* CTA Card */}
+              {/* Consultation Form */}
               <div>
-                <Card className="shadow-elegant border-0 bg-gradient-primary text-white">
-                  <CardContent className="p-8 text-center">
-                    <Crown className="w-16 h-16 mx-auto mb-6 opacity-80" />
-                    <h3 className="font-serif text-3xl font-bold mb-4">Ready to Look Stunning?</h3>
-                    <p className="text-white/90 mb-8 text-lg">
-                      Let's create the perfect bridal look for your special day. Our consultation includes personalized 
-                      beauty advice and custom package recommendations.
-                    </p>
-                    <div className="space-y-4">
-                      <Button 
-                        size="lg"
-                        className="w-full bg-white text-primary hover:bg-white/90 hover:scale-105 transition-bounce text-lg"
-                      >
-                        <Phone className="w-5 h-5 mr-2" />
-                        Call Now for Booking
-                      </Button>
-                      <Button 
-                        size="lg"
-                        variant="outline"
-                        className="w-full border-white/30 text-white hover:bg-white/10 text-lg"
-                      >
-                        <Mail className="w-5 h-5 mr-2" />
-                        Send Message
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
+                <ConsultationForm />
               </div>
             </div>
           </div>
@@ -328,7 +321,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <div className="font-serif font-bold text-3xl bg-gradient-primary bg-clip-text text-transparent mb-4">
-              Rosebloom
+              The Magic Touch - Palak Makeover
             </div>
             <p className="text-background/70 mb-6">
               Crafting beautiful bridal looks since 2014
@@ -338,7 +331,7 @@ const Index = () => {
               <span>•</span>
               <span>Terms of Service</span>
               <span>•</span>
-              <span>© 2024 Rosebloom Bridal Parlour</span>
+              <span>© 2024 The Magic Touch - Palak Makeover</span>
             </div>
           </div>
         </div>

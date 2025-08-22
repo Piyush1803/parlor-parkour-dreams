@@ -47,7 +47,7 @@ const Navbar = () => {
               onClick={() => scrollToSection("home")}
               className="font-serif font-bold text-2xl lg:text-3xl bg-gradient-primary bg-clip-text text-transparent hover:scale-105 transition-smooth"
             >
-              Rosebloom
+              The Magic Touch
             </button>
           </div>
 
